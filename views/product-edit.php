@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sửa sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+<h2 class="mb-4">Sửa sản phẩm</h2>
+
+<form action="index.php?page=product-update&id=<?= $product['id'] ?>" method="POST" class="card p-4 shadow-sm">
+
+    <div class="mb-3">
+        <label class="form-label">Tên sản phẩm</label>
+        <input type="text" name="name" value="<?= $product['name'] ?>" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Giá</label>
+        <input type="number" name="price" value="<?= $product['price'] ?>" class="form-control" required>
+    </div>
+
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+        <a href="index.php?page=product-list" class="btn btn-secondary">Quay lại</a>
+    </div>
+
+</form>
+
+</body>
+</html>
